@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLegal Black - We Don't Build Templates. We Build Law Firm Growth Engines.</title>
+    <meta name="description" content="Transform your law firm's online presence with research-backed, compliance-aware websites that convert visitors into clients.">
+    <meta name="keywords" content="law firm website, legal SEO, law firm marketing, attorney website, legal web design, law firm growth">
+    <meta name="author" content="OpenLegal Black">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="OpenLegal Black - Law Firm Growth Engines">
+    <meta property="og:description" content="We don't build templates. We build law firm growth engines with research-backed SEO and conversion design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openlegalblack.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenLegal Black - Law Firm Growth Engines">
+    <meta name="twitter:description" content="We don't build templates. We build law firm growth engines with research-backed SEO and conversion design.">
+    <link rel="canonical" href="https://openlegalblack.github.io/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            background: #000000;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logo-container img {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-black-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 2px;
+            padding-top: 2px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2c2c2c 100%);
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            font-weight: 400;
+            max-width: 800px;
+        }
+
+        .hero .description {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 40px;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 20px 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+            border: 2px solid #ffffff;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255,255,255,0.35);
+        }
+
+        .pricing-card .cta-button {
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, #000000 0%, #2c2c2c 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 17px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .pricing-card .cta-button:hover {
+            background: linear-gradient(135deg, #2c2c2c 0%, #000000 100%);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .pricing-card.featured .cta-button {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            box-shadow: 0 8px 30px rgba(255, 68, 68, 0.4);
+        }
+
+        .pricing-card.featured .cta-button:hover {
+            background: linear-gradient(135deg, #cc0000 0%, #ff4444 100%);
+            box-shadow: 0 12px 40px rgba(255, 68, 68, 0.6);
+        }
+
+        .cta-button-secondary {
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: #ffffff;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            margin-left: 15px;
+            box-shadow: 0 10px 40px rgba(255, 68, 68, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .cta-button-secondary:hover {
+            background: linear-gradient(135deg, #cc0000 0%, #ff4444 100%);
+            box-shadow: 0 12px 50px rgba(255, 68, 68, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .social-proof {
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+            padding: 50px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .social-proof-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-proof-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .social-proof-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .social-proof-text {
+            font-size: 16px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .statement-section {
+            padding: 100px 0;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .statement-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .statement-section .statement-sub {
+            font-size: 20px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .approach-boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .approach-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .approach-box:hover {
+            border-color: #000000;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .approach-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #000000;
+            color: white;
+            border-radius: 15px;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .approach-box h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .approach-box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .features-section {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: #000000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+            border-color: #000000;
+        }
+
+        .feature-icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .feature-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .design-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .design-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .design-item:hover {
+            border-color: #000000;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .design-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .design-item h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .design-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .compliance-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .compliance-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 25px;
+        }
+
+        .compliance-section p {
+            font-size: 18px;
+            color: #b0b0b0;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .pricing {
+            padding: 120px 0;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+            position: relative;
+        }
+
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .launch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(255, 68, 68, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(255, 68, 68, 0.4);
+            }
+            50% {
+                box-shadow: 0 10px 50px rgba(255, 68, 68, 0.6);
+            }
+        }
+
+        .launch-badge::after {
+            content: '⚡';
+            margin-left: 8px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 24px;
+            box-shadow: 0 15px 60px rgba(0,0,0,0.1);
+            border: 3px solid #e0e0e0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #000000 0%, #4a4a4a 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: #000000;
+            transform: translateY(-12px);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.2);
+        }
+
+        .pricing-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .pricing-card.featured {
+            border-color: #000000;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            box-shadow: 0 20px 70px rgba(0,0,0,0.15);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-12px);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 30px;
+            right: -38px;
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: white;
+            padding: 8px 50px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+        }
+
+        .plan-name {
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+
+        .plan-description {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .plan-price-container {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px -10px 35px;
+            border: 2px dashed #d0d0d0;
+        }
+
+        .plan-price {
+            font-size: 64px;
+            font-weight: 900;
+            color: #000000;
+            margin-bottom: 10px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .plan-price-note {
+            color: #555;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            background: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .launch-offer-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #333;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.3;
+            min-height: 24px;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            color: #000000;
+            font-weight: 900;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            line-height: 1;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .plan-features li span {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .guarantee-badge {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .guarantee-badge strong {
+            color: #1e40af;
+            font-weight: 800;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2c2c2c 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            margin-top: 50px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #cccccc;
+        }
+
+        footer {
+            background: #000000;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .approach-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-black-text {
+                font-size: 18px;
+                letter-spacing: 1.5px;
+            }
+
+            .logo-container img {
+                height: 38px;
+            }
+
+            .cta-button-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .design-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .plan-features li {
+                white-space: normal;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="attached_assets/open-legal-13 (3)_1759762940345.webp" alt="OpenLegal Logo">
+                <span class="logo-black-text">BLACK</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🚀 Built by the team behind opensupportsuite.com</div>
+                <h1><span class="highlight">We Don't Build Templates.</span><br>We Build Law Firm Growth Engines.</h1>
+                <p class="subtitle">Most vendors sell cookie-cutter websites. We build research-backed, compliance-aware, conversion-optimized systems exclusively for law firms.</p>
+                <p class="description">Every element is designed to bring more visitors in through SEO and turn them into paying clients through strategic design.</p>
+                <div>
+                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Schedule Free Strategy Call</a>
+                    <a href="#pricing" class="cta-button cta-button-secondary">🔥 See Launch Offer Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <div class="social-proof-item">
+                    <div class="social-proof-number">40%</div>
+                    <div class="social-proof-text">Reported by beta client<br>Increase in clients reaching out</div>
+                </div>
+                <div class="social-proof-item">
+                    <div class="social-proof-number">100%</div>
+                    <div class="social-proof-text">Bar-compliant content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="statement-section">
+        <div class="container">
+            <h2>We Don't Just Build Law Firm Websites — We Build Client Pipelines.</h2>
+            <p class="statement-sub">Our two-pronged approach transforms your website into a consistent source of qualified clients through precision, compliance, and purpose.</p>
+            
+            <div class="approach-boxes">
+                <div class="approach-box">
+                    <div class="approach-number">1</div>
+                    <h3>SEO That Puts Your Firm Ahead</h3>
+                    <p>We understand how clients search for legal help and how Google evaluates law firms. Our SEO strategy is built specifically for the legal industry, keeping state bar advertising rules and evolving regulations in mind.</p>
+                </div>
+                <div class="approach-box">
+                    <div class="approach-number">2</div>
+                    <h3>Design That Converts</h3>
+                    <p>Once traffic arrives, design does the heavy lifting. We handcraft every website to reflect your firm's voice, practice areas, and goals—guiding visitors toward consultations without distraction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">SEO Excellence</div>
+                <h2 class="section-title">SEO That Brings Qualified Clients to Your Door</h2>
+                <p class="section-subtitle">Unlike generic agencies, we understand the legal industry. Every strategy is designed to work within compliance frameworks while dominating search results.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Legal Keyword Strategy</h3>
+                    <p>We identify keywords real clients use—not generic phrases. Our research uncovers the exact terms potential clients search when they need your services.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚖️</span>
+                    <h3>Ethical Content Optimization</h3>
+                    <p>Every page is written and optimized within your state's compliance framework. No misleading claims, no bar violations—just strategic, compliant content that ranks.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Technical SEO Excellence</h3>
+                    <p>From mobile speed to schema markup for attorney listings, we cover the technical essentials that Google rewards—making your site faster and more discoverable.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📍</span>
+                    <h3>Local SEO for Law Firms</h3>
+                    <p>Appear at the top when someone searches "family lawyer near me" or "immigration attorney [city]." We optimize your local presence to capture high-intent searches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="design-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Conversion Design</div>
+                <h2 class="section-title">Website Design That Converts Visitors Into Clients</h2>
+                <p class="section-subtitle">Unlike FindLaw's cookie-cutter sites, we handcraft every element using legal marketing psychology to build trust and drive action.</p>
+            </div>
+            <div class="design-grid">
+                <div class="design-item">
+                    <div class="design-icon">✍️</div>
+                    <h3>Typography That Builds Authority</h3>
+                    <p>We select fonts that project trust, confidence, and professionalism—subtle but powerful.</p>
+                </div>
+                <div class="design-item">
+                    <div class="design-icon">🎨</div>
+                    <h3>Color Psychology</h3>
+                    <p>Every color is chosen using legal marketing psychology to build calm, trust, and clarity.</p>
+                </div>
+                <div class="design-item">
+                    <div class="design-icon">🗺️</div>
+                    <h3>Layouts Built for Action</h3>
+                    <p>Our layouts guide visitors through your story and toward consultations, bookings, or calls—without distraction.</p>
+                </div>
+                <div class="design-item">
+                    <div class="design-icon">🎯</div>
+                    <h3>Research-Backed CTAs</h3>
+                    <p>Every button placement and call-to-action is tested for conversion. Nothing is random.</p>
+                </div>
+                <div class="design-item">
+                    <div class="design-icon">⭐</div>
+                    <h3>Hero Sections That Win Trust</h3>
+                    <p>First impressions matter. We build hero sections that immediately communicate credibility and empathy.</p>
+                </div>
+                <div class="design-item">
+                    <div class="design-icon">📱</div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Most legal searches happen on mobile. Your site will look stunning and convert on every device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="compliance-section">
+        <div class="container">
+            <h2>We Understand Law Firm Compliance and Client Behavior</h2>
+            <p>We stay updated with changes in bar rules and advertising regulations across states, ensuring your website not only performs—it stays compliant. Our research team also tracks how potential clients behave online, allowing us to design for trust, empathy, and action.</p>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <div class="launch-badge">🎉 Limited Time Launch Offer</div>
+                <h2 class="section-title">Transform Your Firm's Online Presence</h2>
+                <p class="section-subtitle">Choose the plan that fits your firm's growth stage. Both include our research-backed approach to SEO and conversion design.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="launch-offer-tag">🔥 Launch Offer</div>
+                    <h3 class="plan-name">Plan 1: Foundation</h3>
+                    <p class="plan-description">Perfect for firms getting started with professional digital marketing and establishing a strong online presence.</p>
+                    <div class="plan-price-container">
+                        <div class="plan-price">$2,000</div>
+                        <p class="plan-price-note">One-time investment</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-title">Custom Website Design</span> (up to 5 pages)</li>
+                        <li><span class="feature-title">Full SEO Optimization</span> with legal keywords</li>
+                        <li><span class="feature-title">100% Compliance-Checked Content</span> for state bar</li>
+                        <li><span class="feature-title">Google Business Profile Setup</span> and optimization</li>
+                        <li><span class="feature-title">Mobile-Responsive Design</span> for all devices</li>
+                        <li><span class="feature-title">Contact Forms and Lead Capture</span> systems</li>
+                    </ul>
+                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="launch-offer-tag">🔥 Launch Offer</div>
+                    <h3 class="plan-name">Plan 2: Growth Engine</h3>
+                    <p class="plan-description">Designed for firms that want consistent growth, measurable results, and continuous optimization to stay ahead of competition.</p>
+                    <div class="plan-price-container">
+                        <div class="plan-price">$2,000</div>
+                        <p class="plan-price-note">Setup + $1000 Ongoing Monthly</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-title">Everything in Plan 1, Plus:</span></li>
+                        <li><span class="feature-title">1 New Optimized Page Monthly</span> with SEO content</li>
+                        <li><span class="feature-title">Continuous SEO Optimization</span> to improve rankings</li>
+                        <li><span class="feature-title">Performance Tracking Dashboard</span> with real-time analytics</li>
+                        <li><span class="feature-title">Monthly Strategy Sessions</span> to review performance</li>
+                        <li><span class="feature-title">Content Updates and Refinements</span> based on data</li>
+                    </ul>
+                    <div class="guarantee-badge">
+                        <strong>Guaranteed 10% Increase</strong> in client intake from baseline or we keep optimizing at no extra cost
+                    </div>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">✓ Cancel Anytime — No Long-Term Contracts</p>
+                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Schedule Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Ready to Build Your Client Pipeline?</h2>
+                <p>Schedule a free 30-minute strategy call to discuss your firm's goals and see how OpenLegal Black can transform your online presence into a consistent source of qualified clients.</p>
+                <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Book Your Free Strategy Call</a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📩</span>
+                        <a href="mailto:contact@openlegalblack.com">contact@openlegalblack.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        <a href="https://www.openlegal.com" target="_blank">www.openlegal.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OpenLegal Black. All rights reserved. Built for law firms, by legal marketing experts.</p>
+        </div>
+    </footer>
+</body>
+</html>
