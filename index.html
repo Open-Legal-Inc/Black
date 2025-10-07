@@ -128,9 +128,70 @@
         .hero .description {
             font-size: 18px;
             color: #999;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             max-width: 700px;
             line-height: 1.8;
+        }
+
+        .hero-guarantees {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-guarantees h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .guarantee-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: #e0e0e0;
+            line-height: 1.4;
+        }
+
+        .guarantee-item:first-child {
+            animation: pulse-guarantee 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-guarantee {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.02);
+                opacity: 0.9;
+            }
+        }
+
+        .guarantee-icon {
+            color: #4ade80;
+            font-size: 18px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .guarantee-highlight {
+            color: #ffffff;
+            font-weight: 600;
         }
 
         .cta-button {
@@ -811,6 +872,25 @@
                 white-space: normal;
                 font-size: 14px;
             }
+
+            .hero-guarantees {
+                padding: 20px 25px;
+                margin-bottom: 30px;
+            }
+
+            .hero-guarantees h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .guarantee-item {
+                font-size: 15px;
+                gap: 10px;
+            }
+
+            .guarantee-icon {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -831,6 +911,25 @@
                 <h1><span class="highlight">We Don't Build Templates.</span><br>We Build Law Firm Growth Engines.</h1>
                 <p class="subtitle">Most vendors sell cookie-cutter websites. We build research-backed, compliance-aware, conversion-optimized systems exclusively for law firms.</p>
                 <p class="description">Every element is designed to bring more visitors in through SEO and turn them into paying clients through strategic design.</p>
+                
+                <div class="hero-guarantees">
+                    <h3>Our Guarantees</h3>
+                    <ul class="guarantee-list">
+                        <li class="guarantee-item">
+                            <span class="guarantee-icon">✓</span>
+                            <span><span class="guarantee-highlight">Guaranteed 10% Increase in Client Intake</span> — or we keep optimizing at no extra cost</span>
+                        </li>
+                        <li class="guarantee-item">
+                            <span class="guarantee-icon">✓</span>
+                            <span><span class="guarantee-highlight">Cancel Anytime</span> — No Long-Term Contracts</span>
+                        </li>
+                        <li class="guarantee-item">
+                            <span class="guarantee-icon">✓</span>
+                            <span><span class="guarantee-highlight">Prefer Simplicity?</span> One-Time Build Option — No Ongoing Fees</span>
+                        </li>
+                    </ul>
+                </div>
+                
                 <div>
                     <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Schedule Free Strategy Call</a>
                     <a href="#pricing" class="cta-button cta-button-secondary">🔥 See Launch Offer Pricing</a>
