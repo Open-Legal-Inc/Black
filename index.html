@@ -47,10 +47,74 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .logo-container {
             display: flex;
             align-items: center;
             gap: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .logo-container:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .logo-container:hover .logo-black-text {
+            color: #ffffff;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+        }
+
+        .nav-menu li a:hover {
+            color: #cccccc;
+        }
+
+        .nav-cta {
+            background: #ffffff;
+            color: #000000 !important;
+            padding: 16px 36px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .nav-cta span {
+            padding: 0 6px;
+        }
+
+        .nav-cta:hover {
+            background: #f8f8f8;
+            color: #000000 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
 
         .logo-container img {
@@ -849,6 +913,19 @@
                 flex-direction: column;
                 gap: 20px;
             }
+
+            .nav-menu {
+                display: flex;
+                gap: 15px;
+            }
+
+            .nav-menu li:not(:last-child) {
+                display: none;
+            }
+
+            .header-content {
+                justify-content: space-between;
+            }
         }
 
         @media (max-width: 640px) {
@@ -897,9 +974,19 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo-container">
-                <img src="attached_assets/open-legal-13 (3)_1759762940345.webp" alt="OpenLegal Logo">
-                <span class="logo-black-text">BLACK</span>
+            <div class="header-content">
+                <a href="#" class="logo-container">
+                    <img src="attached_assets/open-legal-13 (3)_1759762940345.webp" alt="OpenLegal Logo">
+                    <span class="logo-black-text">BLACK</span>
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#approach">Approach</a></li>
+                        <li><a href="https://calendly.com/openlegalblack/30min" class="nav-cta" target="_blank"><span>Schedule Free Strategy Call</span></a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -909,8 +996,6 @@
             <div class="hero-content">
                 <div class="hero-badge">🚀 Built by the team behind opensupportsuite.com</div>
                 <h1><span class="highlight">We Don't Build Templates.</span><br>We Build Law Firm Growth Engines.</h1>
-                <p class="subtitle">Most vendors sell cookie-cutter websites. We build research-backed, compliance-aware, conversion-optimized systems exclusively for law firms.</p>
-                <p class="description">Every element is designed to bring more visitors in through SEO and turn them into paying clients through strategic design.</p>
                 
                 <div class="hero-guarantees">
                     <h3>Our Guarantees</h3>
@@ -953,7 +1038,60 @@
         </div>
     </section>
 
-    <section class="statement-section">
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <div class="launch-badge">🎉 Limited Time Launch Offer</div>
+                <h2 class="section-title">Transform Your Firm's Online Presence</h2>
+                <p class="section-subtitle">Choose the plan that fits your firm's growth stage. Both include our research-backed approach to SEO and conversion design.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="launch-offer-tag">🔥 Launch Offer</div>
+                    <h3 class="plan-name">Plan 1: Foundation</h3>
+                    <p class="plan-description">Perfect for firms getting started with professional digital marketing and establishing a strong online presence.</p>
+                    <div class="plan-price-container">
+                        <div class="plan-price">$2,000</div>
+                        <p class="plan-price-note">One-time investment</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-title">Custom Website Design</span> (up to 5 pages)</li>
+                        <li><span class="feature-title">Full SEO Optimization</span> with legal keywords</li>
+                        <li><span class="feature-title">100% Compliance-Checked Content</span> for state bar</li>
+                        <li><span class="feature-title">Google Business Profile Setup</span> and optimization</li>
+                        <li><span class="feature-title">Mobile-Responsive Design</span> for all devices</li>
+                        <li><span class="feature-title">Contact Forms and Lead Capture</span> systems</li>
+                    </ul>
+                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="launch-offer-tag">🔥 Launch Offer</div>
+                    <h3 class="plan-name">Plan 2: Growth Engine</h3>
+                    <p class="plan-description">Designed for firms that want consistent growth, measurable results, and continuous optimization to stay ahead of competition.</p>
+                    <div class="plan-price-container">
+                        <div class="plan-price">$2,000</div>
+                        <p class="plan-price-note">Setup + $1000 Ongoing Monthly</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-title">Everything in Plan 1, Plus:</span></li>
+                        <li><span class="feature-title">1 New Optimized Page Monthly</span> with SEO content</li>
+                        <li><span class="feature-title">Continuous SEO Optimization</span> to improve rankings</li>
+                        <li><span class="feature-title">Performance Tracking Dashboard</span> with real-time analytics</li>
+                        <li><span class="feature-title">Monthly Strategy Sessions</span> to review performance</li>
+                        <li><span class="feature-title">Content Updates and Refinements</span> based on data</li>
+                    </ul>
+                    <div class="guarantee-badge">
+                        <strong>Guaranteed 10% Increase</strong> in client intake from baseline or we keep optimizing at no extra cost
+                    </div>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">✓ Cancel Anytime — No Long-Term Contracts</p>
+                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Schedule Strategy Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="statement-section" id="approach">
         <div class="container">
             <h2>We Don't Just Build Law Firm Websites — We Build Client Pipelines.</h2>
             <p class="statement-sub">Our two-pronged approach transforms your website into a consistent source of qualified clients through precision, compliance, and purpose.</p>
@@ -973,7 +1111,7 @@
         </div>
     </section>
 
-    <section class="features-section">
+    <section class="features-section" id="features">
         <div class="container">
             <div class="section-header">
                 <div class="section-tag">SEO Excellence</div>
@@ -1051,59 +1189,6 @@
         <div class="container">
             <h2>We Understand Law Firm Compliance and Client Behavior</h2>
             <p>We stay updated with changes in bar rules and advertising regulations across states, ensuring your website not only performs—it stays compliant. Our research team also tracks how potential clients behave online, allowing us to design for trust, empathy, and action.</p>
-        </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="pricing-header">
-                <div class="launch-badge">🎉 Limited Time Launch Offer</div>
-                <h2 class="section-title">Transform Your Firm's Online Presence</h2>
-                <p class="section-subtitle">Choose the plan that fits your firm's growth stage. Both include our research-backed approach to SEO and conversion design.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="launch-offer-tag">🔥 Launch Offer</div>
-                    <h3 class="plan-name">Plan 1: Foundation</h3>
-                    <p class="plan-description">Perfect for firms getting started with professional digital marketing and establishing a strong online presence.</p>
-                    <div class="plan-price-container">
-                        <div class="plan-price">$2,000</div>
-                        <p class="plan-price-note">One-time investment</p>
-                    </div>
-                    <ul class="plan-features">
-                        <li><span class="feature-title">Custom Website Design</span> (up to 5 pages)</li>
-                        <li><span class="feature-title">Full SEO Optimization</span> with legal keywords</li>
-                        <li><span class="feature-title">100% Compliance-Checked Content</span> for state bar</li>
-                        <li><span class="feature-title">Google Business Profile Setup</span> and optimization</li>
-                        <li><span class="feature-title">Mobile-Responsive Design</span> for all devices</li>
-                        <li><span class="feature-title">Contact Forms and Lead Capture</span> systems</li>
-                    </ul>
-                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Get Started</a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="launch-offer-tag">🔥 Launch Offer</div>
-                    <h3 class="plan-name">Plan 2: Growth Engine</h3>
-                    <p class="plan-description">Designed for firms that want consistent growth, measurable results, and continuous optimization to stay ahead of competition.</p>
-                    <div class="plan-price-container">
-                        <div class="plan-price">$2,000</div>
-                        <p class="plan-price-note">Setup + $1000 Ongoing Monthly</p>
-                    </div>
-                    <ul class="plan-features">
-                        <li><span class="feature-title">Everything in Plan 1, Plus:</span></li>
-                        <li><span class="feature-title">1 New Optimized Page Monthly</span> with SEO content</li>
-                        <li><span class="feature-title">Continuous SEO Optimization</span> to improve rankings</li>
-                        <li><span class="feature-title">Performance Tracking Dashboard</span> with real-time analytics</li>
-                        <li><span class="feature-title">Monthly Strategy Sessions</span> to review performance</li>
-                        <li><span class="feature-title">Content Updates and Refinements</span> based on data</li>
-                    </ul>
-                    <div class="guarantee-badge">
-                        <strong>Guaranteed 10% Increase</strong> in client intake from baseline or we keep optimizing at no extra cost
-                    </div>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">✓ Cancel Anytime — No Long-Term Contracts</p>
-                    <a href="https://calendly.com/openlegalblack/30min" class="cta-button" target="_blank">Schedule Strategy Call</a>
-                </div>
-            </div>
         </div>
     </section>
 
